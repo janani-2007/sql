@@ -1,0 +1,11 @@
+--1. Using LIKE% Operator
+select "car", "mpg", "cylinders", "weight" from cars 
+where "car" LIKE 'fords'
+
+--1. Using LIKE% Operator
+select "car", "mpg", "cylinders", "weight" from cars 
+where "car" LIKE '%skylark%'
+
+--2. Using LIKE_Operator
+select "car", "mpg", "cylinders", "weight" from cars
+where "car" LIKE '%skylark__'
