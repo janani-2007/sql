@@ -1,0 +1,9 @@
+--1. Read rows
+select * from my_courses
+
+--2. Read columns values
+select course from my_courses
+
+--3. Read cell values
+select "Fees" from my_courses
+where course = 'python for datascience'

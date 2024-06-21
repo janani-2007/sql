@@ -1,0 +1,14 @@
+--1. Delete single rows
+delete from my_courses
+where "id" = '001'
+select * from my_courses
+
+--1. Delete multiple rows
+delete from my_courses
+where "Fees" > 6000 
+
+--1. delete all rows
+delete from courses
+
+--1. Drop tables
+drop table my_courses

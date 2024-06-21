@@ -1,0 +1,24 @@
+--1. Create tables and columns 
+create table my_courses2
+(
+"id" CHAR(3) PRIMARY KEY NOT NULL, 
+"course" VARCHAR(100) NOT NULL,
+"Fees" INTEGER NOT NULL, 
+"duration" INTEGER 
+);
+
+--2. Create rows- insert
+insert INTO my_courses
+VALUES('001', 'Python for everyone', 5999, 40);
+
+--insert with null values
+insert INTO my_courses
+VALUES('002', 'python advanced developer', 11999, NULL)
+
+--Modify NULL constaints
+
+--3.Create rows-partial insert
+insert into my_courses
+("id", "course", "Fees")
+values
+('003', 'python for datascience', 11999)
