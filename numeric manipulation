@@ -1,0 +1,16 @@
+--1. ABS Function 
+select "car", ABS("mpg") from cars
+
+--2. PI Function
+-- Multiplying mgp with PI value 
+select "car", "mpg" * PI() from cars 
+
+--3. SQRT Function 
+select "car", SQRT("mpg") from cars 
+
+--4. Trigonometry Function 
+select "car", "mpg",
+SIN(RADIANS("mpg")),
+COS(RADIANS("mpg")),
+TAN(RADIANS("mpg"))
+FROM cars
