@@ -1,0 +1,33 @@
+create table student(stuid int,sname text,course text)
+insert into student values(1,'janani','SQL'),
+(2,'santha','SQL'),
+(3,'Gayathri','SQLB')
+select * from student
+
+create table mark(stuid int,mark int,grade varchar)
+
+insert into mark values(1,90,'A+'),
+(2,90,'A+'),
+(4,100,'A++'),
+(5,78,'B')
+
+select * from mark
+
+-- inner join
+select s.stuid,s.sname,s.course ,m.mark,m.grade from student s
+ ,mark m where s.stuid=m.stuid 
+	
+	-- full join
+select s.stuid,s.sname,s.course ,m.mark,m.grade from student s
+	full join
+ mark m on  s.stuid=m.stuid  
+	
+	-- left join
+select s.stuid,s.sname,s.course ,m.mark,m.grade from student s
+	left join
+ mark m on  s.stuid=m.stuid  
+
+-- right join
+select s.stuid,s.sname,s.course ,m.mark,m.grade from student s
+right join
+ mark m on  s.stuid=m.stuid  
