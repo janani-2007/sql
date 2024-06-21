@@ -1,0 +1,26 @@
+--1. LEFT Function 
+select LEFT("car", 9) from cars
+
+--2. RIGHT Function
+select RIGHT("car", 9) from cars
+
+--3. UPPER Function 
+select UPPER("car") from cars 
+
+--4. LOWER Function 
+select LOWER("car") from cars
+
+--5. LTRIM Function 
+select LTRIM("car") from cars 
+
+--6. RTRIM Function
+select RTRIM("car") from cars 
+
+--7. TRIM Function 
+select TRIM("car") from cars 
+
+--8. LENGTH Function 
+select "car", LENGTH("car") from cars
+
+--9. SUBSTRING Function 
+select "car", SUBSTRING("car", 10,9) FROM cars
