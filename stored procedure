@@ -1,0 +1,17 @@
+call insert_course(234,120,'new course')
+select * from courses
+
+--2. Coding method
+create or replace procedure Addcourse
+(
+id_ integer,
+duration_ varchar,
+course_ varchar
+)
+language plpgsql AS
+$$
+BEGIN 
+     INSERT INTO courses ("id", "courses", "duration")
+	 values (id_, courses_, duration_);
+END 
+$$
