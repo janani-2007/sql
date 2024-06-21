@@ -1,0 +1,24 @@
+--1. Filtering by Subquery
+select distinct ("cylinders")
+from cars where "weight" < 2000
+
+select "cars", "cylinders", "weight"
+from cars where "cylinders" IN 
+(select distinct("cylinders")
+from cars where "weight"<2000)
+order by "weight" DESC
+
+--2. Multi-level subquery
+select "cars", "cylinders", "weight" from cars where "cylinders"
+IN (select distinct("cylinders")from cars where "weight"
+	 IN (select MIN("weight") from cars where "orgin" = 'Japan'))
+order by "weight" DESC
+
+--3. Common table expression
+WITH CTE_CARS AS(
+	select "cars", "weight", "orgin" from cars
+	where "orgin" = 'Europe' and "cylinders" > 5
+)
+select * from CTE_CARS where "weight" <4000
+	
+
