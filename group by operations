@@ -1,0 +1,20 @@
+--1. GROUP BY Functions
+select "orgin", count(*)
+from cars GROUP BY "orgin"
+
+--2. Filter Groups
+select "car", count(*)
+from cars GROUP BY "car"
+having count(*)>1
+
+--3. Filter groups with WHERE
+select "cars", count(*)
+from cars where "orgin" = 'Japan'
+GROUP BY "cars"
+HAVING COUNT(*)>1
+
+--4.Grouping and sorting 
+select "cars", count(*) as "COUNT"
+from cars GROUP BY "cars"
+having count(*)>1
+order by "COUNT" DESC
