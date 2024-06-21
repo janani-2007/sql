@@ -1,0 +1,6 @@
+select "car" from cars
+select "car","orgin" from cars
+select * from cars
+select distinct "orgin" from cars
+select "car" from cars limit 3
+select "car" from cars limit 3
