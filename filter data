@@ -1,0 +1,13 @@
+--1. Using the WHERE clause
+select "car", "mpg", "cylinders", "weight"
+FROM cars
+WHERE "car" = 'Ford Torino'
+
+--2. Filtering by single condition 
+select "car", "mpg", "cylinders", "weight" FROM cars WHERE "cylinders" > 6
+
+--3. Filtering ranges of values
+select "car", "mpg", "cylinders", "weight" from cars WHERE "cylinders" between 3 and 5
+
+--4. Filtering Null values
+select "car", "mpg" "cylinders", "weight" from cars WHERE "cylinders" IS NULL
