@@ -1,0 +1,19 @@
+--1. sort by columns names
+SELECT "car", "mpg", "cylinders", "weight" 
+from cars 
+Order by "mpg", "cylinders";
+
+--2. sort by columns positon 
+SELECT "car", "mpg", "cylinders", "weight"
+From cars 
+Order by 2, 3
+
+--3. sort single columns by ascending order 
+SELECT  "car", "mpg", "cylinders", "weight" 
+from cars 
+order by "mpg" ASC
+
+--4. sorty various columns with different order 
+SELECT "car", "mpg", "cylinders", "weight"
+from cars
+order by "mpg" DESC, 3 ASC
