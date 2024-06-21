@@ -1,0 +1,15 @@
+--1. Update cell values
+update my_courses
+set "duration" = 90
+where "course"= 'python for datascience'
+
+select * from my_courses
+
+--2. Update multiple cell values
+update my_courses
+set "duration" = 90, "Fees" = 14999
+where "course" = 'python advanced developer'
+
+--2. Update entire columns values
+Update my_courses
+set "duration" = null
