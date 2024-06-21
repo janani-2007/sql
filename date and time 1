@@ -1,0 +1,45 @@
+--1. Filter Exact Date
+
+select "names", "joining date" from students 
+where "joining date" = '2022-07-25'
+
+--2. Filter Date Greater lesser
+
+select "names", "joining date" from students
+where "joining date" > '2022-09-25'
+
+--3. Filter Date between Range
+
+select "names", "joining date" from students
+where "joining date"
+between '22-08-01' and '2022-08-30'
+
+--4 Filter Date Ranges Using AND
+
+select * from students
+where "joining date" >= '2022-08-01'
+and "joining date" <= '2022-08-30'
+
+--5. Select Years from dates
+
+select "names",
+extract (Year from "endingdate")as "joined Year" 
+from students
+
+--6. Filter dates of specific year
+
+select "names", "joiningdate"
+from students
+Where Extract(year from "endingdate")= 2023
+
+--7. Filter Date of Specific Month
+
+select "names", "joiningdate"
+from students
+Where Extract (month from "joiningdate") =8 
+
+--8.Filter by Date Difference
+
+select "names", "joiningdate","endingdate"
+from students
+where Extract(year from "endingdate") = 2022
