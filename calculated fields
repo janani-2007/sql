@@ -1,0 +1,10 @@
+--1. Concatenating Fields
+select "cars" ||'  : '|| "weight" from cars 
+
+--2.Perform Math Operations 
+select "car", "weight"*1000
+as "weight (grams)" from cars 
+
+--3. Math Operations With Columns
+select "cars", "mpg"/"cylinders"
+as "mpg/cyl" from cars

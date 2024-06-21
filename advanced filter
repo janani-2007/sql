@@ -1,0 +1,21 @@
+--1. Using  AND Operator 
+select "car", "mpg", "cylinders", "weight" from cars 
+WHERE "mpg" = 17 and "cylinders" = 8
+
+--2. Using OR Operator 
+select "car", "mpg", "cylinders", "weight" from cars
+where "mpg" = 17 or "mpg" = 15
+
+--3. Order of Execution 
+select "car", "mpg", "cylinders", "weight" from cars 
+where "mpg" = 17 or "mpg" = 15 and "cylinders" = 6
+select "car", "mpg", "cylinders", "weight" from cars
+where ("mpg" = 17 or "mpg" = 15) AND "cylinders" = 6
+
+--4. Using IN Operator 
+select "car", "mpg", "cylinders", "weight" from cars
+where "mpg" IN (14, 15 ,17)
+
+--5. Using NOT Operator 
+select "car", "mpg", "cylinders", "weight" from cars
+where NOT "mpg" = 17

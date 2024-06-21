@@ -1,0 +1,10 @@
+--1. Union Function
+select "cars", "cylinders" from cars where "cylinders" = 6
+UNION
+SELECT "cars", "cylinders" from cars where "orgin" in ('Japan', 'Europe')
+
+--2. Combine queries and sort result
+select "cars", "cylinders" from cars where "cylinders" = 6
+UNION
+select "cars", "cylinders" from cars where "cylinders" = 6
+order by "cylinders" DESC

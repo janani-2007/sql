@@ -1,0 +1,13 @@
+--1. Case When statement
+
+select "orgin", 
+case
+	when "orgin"= 'US' then 1
+	when "orgin"= 'USA' then 2
+	when "orgin"= 'EUROPE' then 3
+end as "orginmap"
+from cars
+
+--2. REPLACE FUNCTION 
+
+SELECT replace("orgin", 'US', 'USA') AS orgin from cars

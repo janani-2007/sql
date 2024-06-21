@@ -1,0 +1,37 @@
+--1. AVG Function
+select AVG("weight")
+as AVG_weight from cars
+
+--2. Count function
+select count ("weight")
+as TOTAL_ROWS from cars
+
+--3. MAX Function 
+select MAX ("weight")
+as MAX_weight from cars
+
+--3. MIN Function
+select MIN ("weight")
+as MIN_weight from cars
+
+--4. SUM Function
+select sum("weight") 
+from cars
+
+--5. Aggregate Function on where
+select "cars", "weight" from  cars 
+where "weight"= (select MIN ("weight") from cars)
+
+--6. Aggregate on distinct values
+select count("orgin") 
+from cars 
+select count(distinct("orgin"))
+from cars
+
+--7. Combining Aggregate Functions
+select count(*) as items, 
+MIN("weight") as MIN_weight,
+MAX("weight") as MAX_weight,
+AVG("weight") as AVG_weight
+from cars
+
